@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Covid Data</title>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    
+    <script>
+        console.log("{{data1}}")
+
+        // console.log("{{data1}}[0]['data']")
+
+        window.onload = function () {
+        
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title:{
+                text: "Covid Data in different states"
+            },
+            axisX: {
+                valueFormatString: "DD MMM,YY"
+            },
+            axisY: {
+                title: "Temperature (in °C)",
+                suffix: " °C"
+            },
+            legend:{
+                cursor: "pointer",
+                fontSize: 16,
+                itemclick: toggleDataSeries
+            },
+            toolTip:{
+                shared: true
+            },
+            data: [{
+                name: "Myrtle Beach",
+                type: "spline",
+                yValueFormatString: "#0.## °C",
+                showInLegend: true,
+                dataPoints: [
+                    { x: new Date(2017,6,24), y: 31 },
+                    { x: new Date(2017,6,25), y: 31 },
+                    { x: new Date(2017,6,26), y: 29 },
+                    { x: new Date(2017,6,27), y: 29 },
+                    { x: new Date(2017,6,28), y: 31 },
+                    { x: new Date(2017,6,29), y: 30 },
+                    { x: new Date(2017,6,30), y: 29 }
+                ]
+            },
+            {
+                name: "Martha Vineyard",
+                type: "spline",
+                yValueFormatString: "#0.## °C",
+                showInLegend: true,
+                dataPoints: [
+                    { x: new Date(2017,6,24), y: 20 },
+                    { x: new Date(2017,6,25), y: 20 },
+                    { x: new Date(2017,6,26), y: 25 },
+                    { x: new Date(2017,6,27), y: 25 },
+                    { x: new Date(2017,6,28), y: 25 },
+                    { x: new Date(2017,6,29), y: 25 },
+                    { x: new Date(2017,6,30), y: 25 }
+                ]
+            },
+            {
+                name: "Nantucket",
+                type: "spline",
+                yValueFormatString: "#0.## °C",
+                showInLegend: true,
+                dataPoints: [
+                    { x: new Date(2017,6,24), y: 22 },
+                    { x: new Date(2017,6,25), y: 19 },
+                    { x: new Date(2017,6,26), y: 23 },
+                    { x: new Date(2017,6,27), y: 24 },
+                    { x: new Date(2017,6,28), y: 24 },
+                    { x: new Date(2017,6,29), y: 23 },
+                    { x: new Date(2017,6,30), y: 23 }
+                ]
+            }]
+        });
+        chart.render();
+        
+        function toggleDataSeries(e){
+            if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;
+            }
+            else{
+                e.dataSeries.visible = true;
+            }
+            chart.render();
+        }
+        
+        }
+        </script>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        /* Header/logo Title */
+        .header {
+            padding: 9px;
+            text-align: center;
+            background: #000;
+            color: white;
+        }
+
+        /* Increase the font size of the heading */
+        .header h1 {
+            font-size: 40px;
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* Right-aligned link */
+        .navbar a.right {
+            float: right;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Column container */
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            -ms-flex: 30%;
+            /* IE10 */
+            flex: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        /* Main column */
+        .main {
+            -ms-flex: 70%;
+            /* IE10 */
+            flex: 70%;
+            background-color: white;
+            padding: 0px;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="row">
+            <div class="col-md-4">
+
+                <img src="https://cdn.pixabay.com/photo/2020/04/29/07/54/coronavirus-5107715_1280.png" style="    width: auto;
+                height: 106px;    margin-top: 17px;
+
+            " alt="">
+            </div>
+            <div class="col-md-2"style = "margin-right:404px">
+             </div>
+            <div class="col-md-6">
+                <h1>Covid API</h1>
+        <p>Covid left my life in tatters and my emotions in solitude</p>
+            </div>
+         </div>
+        
+    </div>
+
+    <div class="navbar">
+        <marquee behavior="scroll" direction="left" style="color: #fff; text-align:center;font-size:14px">
+            Coronavirus COVID-19 Statistics API Based on public data by Johns Hopkins CSSE. It includes search by country, province, and date. Returns diff for confirmed, deaths, and recovered, compared with the previous day.
+        </marquee>
+      
+    </div>
+
+    <div class="row">
+        <div class="main">
+            <h2 style="text-align: center;">NOVEL CORONAVIRUS</h2>
+            <h5  style="text-align: center">LIVE UPDATES</h5>
+             <p  style="text-align: center">Get the latest updates and data to make progress against the world's deadly virus.</p>
+            <p  style="text-align: center">Obtenez les dernières mises à jour et données pour progresser contre le virus mortel mondial.</p>
+            
+        </div>
+        <div class="side">
+            <div class="row">
+                <div class="col-md-4">
+                    
+<iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="737" height="400" src="https://charts.mongodb.com/charts-data-programming-project-czbjp/embed/charts?id=62f27786-3587-494c-81fe-e6e83cd81add&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+
+                </div>
+                <!-- <div class="col-md-4">
+                    
+<iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="492" height="280" src="https://charts.mongodb.com/charts-data-programming-project-czbjp/embed/charts?id=62f277f6-5496-4706-87f9-6d3ebf3e956a&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+
+                </div> -->
+                <div class="col-md-4">
+                    
+<iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="737" height="400" src="https://charts.mongodb.com/charts-data-programming-project-czbjp/embed/charts?id=62f279dc-4642-4aa6-8303-c5d41d407551&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+
+                </div>
+            </div>
+ 
+<div class="row">
+    <div class="col-md-12">
+        
+<iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="1477" height="480" src="https://charts.mongodb.com/charts-data-programming-project-czbjp/embed/charts?id=62f27350-7e96-42d8-82f4-4cfb6bcc5015&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+    </div>
+</div>
+
+        </div>
+       
+    </div>
+
+    <div class="footer">
+        <h2>Precautions to be taken</h2>
+        <h3>Wear a mask</h3>
+        <h3>Clean your hands</h3>
+        <h3>Maintain social distancing</h3>
+        <h2>Emergency Contact: 1-877-543-8931</h2>
+    </div>
+
+</body>
+
+</html>

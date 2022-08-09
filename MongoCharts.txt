@@ -1,0 +1,21 @@
+Total Confirmed Cases
+
+<iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-data-programming-project-czbjp/embed/charts?id=62f27786-3587-494c-81fe-e6e83cd81add&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+
+====================
+
+Total Recovered Cases
+
+<iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-data-programming-project-czbjp/embed/charts?id=62f277f6-5496-4706-87f9-6d3ebf3e956a&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+
+====================
+
+Total Death Cases
+
+<iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-data-programming-project-czbjp/embed/charts?id=62f279dc-4642-4aa6-8303-c5d41d407551&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+
+====================
+
+Last 10 Days Track
+
+<iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-data-programming-project-czbjp/embed/charts?id=62f27350-7e96-42d8-82f4-4cfb6bcc5015&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
